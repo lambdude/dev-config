@@ -236,6 +236,45 @@ Try using search-to-navigate technique: `/ ? * #`
 
 Text objects, motions, visual mode
 
+```vimscript
+command PerlLint !perl -c %
+nnoremap <leader>l :PerlLint<Cr>
+```
+
+For a quickfix window:
+
+```vimscript
+set makeprg=perl\ -c\ -MVi::QuickFix\ %
+set errorformat+=%m\ at\ %f\ line\ %l\.
+set errorformat+=%m\ at\ %f\ line\ %l\
+```
+
+This invokes with `:make`. `:copen` to inspect errors, `:cn` for next and `:cp` for previous.
+
+Reading in command output and files
+
+Filtering output through other commands:
+
+```
+:%!sort -k2,2r
+:'<,'>!awk '/vim/ {print $3}'
+:1,10!column -t
+```
+
+Built-in `:sort`, `:grep` and `:vimdiff`
+
+```sh
+$ vimdiff file-v1.c file-v2.c
+```
+
+Compiling, using `cargo` mostly.
+
+```
+:!cargo run
+```
+
+Building, using `rake`.
+
 ## Other Binaries
 
 - sed
