@@ -10,10 +10,10 @@
 
 echo "Copying Vim config..."
 
-rm ~/.vimrc
-cp ./vimrc ~/.vimrc
-rm -rf ~/.vim
-cp -r ./vim ~/.vim
+rm $HOME/.vimrc
+cp ./vimrc $HOME/.vimrc
+rm -rf $HOME/.vim
+cp -r ./vim $HOME/.vim
 
 # echo "Copying Bash config..."
 
@@ -22,9 +22,3 @@ cp -r ./vim ~/.vim
 
 # echo "Copying Fish config..."
 
-# echo "Copying Git config..."
-
-# echo "Copying Tmux config..."
-
-# cp tmux/tmux.conf ~/.tmux.conf
-# tmux source-file ~/.tmux.conf
