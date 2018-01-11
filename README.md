@@ -121,6 +121,7 @@ $ cat links.txt | xargs wget
 - multitail
 - watch
 - rake
+- sed
 
 ---
 
@@ -273,15 +274,13 @@ Compiling, using `cargo` mostly.
 :!cargo run
 ```
 
-Building, using `rake`.
+Building, using `rake` and `cargo`.
 
-## Other Binaries
+Debugging, using `gdb` and hopefully `cargo`.
 
-- sed
-- ack
-- rg
-- fd
-- exa
+`ltrace` and `strace` and `lsof` and `pmap`
+
+Revision control with `git`, etc. `diff` is really useful too.
 
 ## Power User Command Reference
 
