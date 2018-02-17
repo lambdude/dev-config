@@ -30,6 +30,7 @@ noremap Q gq
 inoremap <C-u> <C-g>u<C-u>
 
 inoremap jj <Esc>
+vnoremap jj <Esc>
 
 nnoremap <C-z> :sh<Cr>
 " <C-d> to return to vim
