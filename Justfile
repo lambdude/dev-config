@@ -1,3 +1,6 @@
+install:
+    @echo "Installing all the things..."
+
 vim-clean:
     rm $HOME/.vimrc
     rm -rf $HOME/.vim
@@ -12,7 +15,16 @@ vim-plug: vim-init
 vim-copy: vim-plug
     cp vimrc $HOME/.vimrc
     cp vim/mappings.vim $HOME/.vim/mappings.vim
+    cp vim/plugins.vim $HOME/.vim/plugins.vim
     cp vim/colors/nord.vim $HOME/.vim/colors/nord.vim
 
-vim: vim-copy
+vim-plug-install: vim-copy
+    vim +PlugInstall +qall
+
+vim: vim-plug-install
     @echo "Vim config set up"
+
+fish-functions:
+
+fish: fish-functions
+    @echo "Fish set up"

@@ -74,12 +74,12 @@ nnoremap <C-w><C-w> :wa<Cr>
 " Delete buffer
 nnoremap <C-w><C-d> :bd<Cr>
 
-" Previous buffer
-nnoremap <C-w><C-p> :bp<Cr>
-
-" Next buffer
-nnoremap <C-w><C-n> :bn<Cr>
-
 " Search highlight removal
 nnoremap <Leader><Space> :nohlsearch<Cr>
+
+" Just Mapping
+nnoremap <Leader>j :!just<Space>
+
+nnoremap <C-,> :bp<Cr>
+nnoremap <C-.> :bn<Cr>
 

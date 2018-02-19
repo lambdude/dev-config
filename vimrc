@@ -97,6 +97,12 @@ set splitright
 " Set the leader
 let mapleader = ","
 
+" Source plugins
+so ~/.vim/plugins.vim
+
+set statusline+=%{fugitive#statusline()}
+set statusline+=%*
+
 " Source mappings
 so ~/.vim/mappings.vim
 
